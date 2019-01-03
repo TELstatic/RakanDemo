@@ -21,7 +21,7 @@ class FileController extends Controller
      */
     public function getFiles(Request $request)
     {
-        return Auth::user()->prefix('lionkk')->gateway('oss')->module('default')->getFiles($request->get('pid', 0), $request->get('per_page', 50));
+        return Auth::user()->getFiles($request->get('pid', 0), $request->get('per_page', 50));
     }
 
     /**
