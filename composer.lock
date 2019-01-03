@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2334f6dc9c52872ecad350f79f5dce91",
+    "content-hash": "5dffc1a7927b82f083761a6a72afd993",
     "packages": [
         {
             "name": "aliyuncs/oss-sdk-php",
@@ -2964,16 +2964,16 @@
         },
         {
             "name": "telstatic/rakan",
-            "version": "2.0.1",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TELstatic/rakan.git",
-                "reference": "41a096d60afc57a57e93a5c27ba66fe02eabc284"
+                "reference": "4a24f37813904b20a92bec096e9935c5fc7440d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TELstatic/rakan/zipball/41a096d60afc57a57e93a5c27ba66fe02eabc284",
-                "reference": "41a096d60afc57a57e93a5c27ba66fe02eabc284",
+                "url": "https://api.github.com/repos/TELstatic/rakan/zipball/4a24f37813904b20a92bec096e9935c5fc7440d7",
+                "reference": "4a24f37813904b20a92bec096e9935c5fc7440d7",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3016,7 +3016,7 @@
                 }
             ],
             "description": "阿里云OSS配套插件",
-            "time": "2019-01-03T04:33:46+00:00"
+            "time": "2019-01-03T06:14:59+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
