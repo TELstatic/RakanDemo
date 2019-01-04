@@ -16,7 +16,7 @@
                 images: [],
                 urls: {
                     index: '/file/admin/index',    //获取文件地址
-                    upload: '//arabeila.oss-cn-shanghai.aliyuncs.com/',   //上传地址
+                    upload: '//dixfe.oss-cn-hongkong.aliyuncs.com/',   //上传地址
                     create: '/file/admin/create',   //创建目录地址
                     check: '/file/admin/check',    //检查文件唯一
                     policy: '/file/admin/policy',   //获取上传策略地址
