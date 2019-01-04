@@ -11,7 +11,8 @@ import xayah from 'xayah';
 
 Vue.use(xayah);
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('AdminUpload', require('./components/AdminUpload'));
+Vue.component('WebUpload', require('./components/WebUpload'));
 
 const app = new Vue({
     el: '#app'

@@ -9,7 +9,8 @@
 
                     <div class="card-body">
                         <div id="app">
-                            <example-component></example-component>
+                            <Admin-upload></Admin-upload>
+                            <Web-upload></Web-upload>
                         </div>
                     </div>
                 </div>

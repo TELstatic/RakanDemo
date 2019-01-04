@@ -9,7 +9,7 @@ return [
     'default'  => [                         //默认配置
         'prefix'     => 'rakan',               //前缀
         'module'     => 'default',             //模块
-        'gateway'    => 'qiniu',                 //网关
+        'gateway'    => 'oss',                 //网关
         'table_name' => 'rakan_files',           //迁移表 默认名
     ],
     'gateways' => [

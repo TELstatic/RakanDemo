@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
+use OSS\OssClient;
 
 /**
  * 文件管理
@@ -62,8 +64,9 @@ class FileController extends Controller
 
     public function test()
     {
-        return Auth::user()->gateway('qiniu')->getPolicy();
-        $file = '../public/images/faces/avatar2.jpg';
+
+//        return Auth::user()->gateway('qiniu')->getPolicy();
+//        $file = '../public/images/faces/avatar2.jpg';
 
 //        dd(Storage::disk('oss')->putFileAs('avatars', new File($file), 'avatar3.jpg'));
 //        dd(Storage::disk('qiniu')->put('avatars/avatar1.jpg', file_get_contents($file)));
