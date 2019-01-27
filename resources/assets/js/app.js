@@ -30,6 +30,9 @@ Vue.directive('can', {
     }
 });
 
+Vue.component('AdminUpload', require('./components/AdminUpload'));
+Vue.component('WebUpload', require('./components/WebUpload'));
+
 const files = require.context('./pages', true, /\.vue$/i);
 
 // 示例 user/index => user-index

@@ -29,15 +29,15 @@
         <link rel="stylesheet" href="/vendor/css/element-chalk.css"/>
         <link rel="stylesheet" href="/vendor/css/quill.snow.css"/>
     @else
-        <link rel="stylesheet" href="{{ config('website.ali.oss.host')}}/vendor/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="{{ config('website.ali.oss.host')}}/vendor/css/font-awesome.min.css"/>
-        <link rel="stylesheet" href="{{ config('website.ali.oss.host')}}/vendor/css/ionicons.min.css"/>
-        <link rel="stylesheet" href="{{ config('website.ali.oss.host')}}/vendor/css/AdminLTE.min.css"/>
-        <link rel="stylesheet" href="{{ config('website.ali.oss.host')}}/vendor/css/_all-skins.min.css"/>
+        <link rel="stylesheet" href="/vendor/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/vendor/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="/vendor/css/ionicons.min.css"/>
+        <link rel="stylesheet" href="/vendor/css/AdminLTE.min.css"/>
+        <link rel="stylesheet" href="/vendor/css/_all-skins.min.css"/>
 
-        <link rel="stylesheet" href="{{ config('website.ali.oss.host')}}/vendor/css/iview.css"/>
-        <link rel="stylesheet" href="{{ config('website.ali.oss.host')}}/vendor/css/element-chalk.css"/>
-        <link rel="stylesheet" href="{{ config('website.ali.oss.host')}}/vendor/css/quill.snow.css"/>
+        <link rel="stylesheet" href="/vendor/css/iview.css"/>
+        <link rel="stylesheet" href="/vendor/css/element-chalk.css"/>
+        <link rel="stylesheet" href="/vendor/css/quill.snow.css"/>
     @endif
 </head>
 <body class="hold-transition skin-purple sidebar-mini" style="background: #e8e8e8">

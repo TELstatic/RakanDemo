@@ -23,19 +23,19 @@
 
     <script src="/js/app.js"></script>
 @else
-    {{--<script src="{{ config('website.ali.oss.host')}}/vendor/js/vue.min.js"></script>--}}
-    {{--<script src="{{ config('website.ali.oss.host')}}/vendor/js/iview.min.js"></script>--}}
-    {{--<script src="{{ config('website.ali.oss.host')}}/vendor/js/element.js"></script>--}}
-    <script src="{{ config('website.ali.oss.host')}}/vendor/js/axios.min.js"></script>
-    {{--<script src="{{ config('website.ali.oss.host')}}/vendor/js/lodash.min.js"></script>--}}
-    {{--<script src="{{ config('website.ali.oss.host')}}/vendor/js/moment.min.js"></script>--}}
+    {{--<script src="/vendor/js/vue.min.js"></script>--}}
+    {{--<script src="/vendor/js/iview.min.js"></script>--}}
+    {{--<script src="/vendor/js/element.js"></script>--}}
+    <script src="/vendor/js/axios.min.js"></script>
+    {{--<script src="/vendor/js/lodash.min.js"></script>--}}
+    {{--<script src="/vendor/js/moment.min.js"></script>--}}
 
-    <script src="{{ config('website.ali.oss.host')}}/vendor/js/jquery.min.js"></script>
-    <script src="{{ config('website.ali.oss.host')}}/vendor/js/bootstrap.min.js"></script>
-    <script src="{{ config('website.ali.oss.host')}}/vendor/js/adminlte.min.js"></script>
-    <script src="{{ config('website.ali.oss.host')}}/vendor/js/jquery.imageMaps.min.js"></script>
+    <script src="/vendor/js/jquery.min.js"></script>
+    <script src="/vendor/js/bootstrap.min.js"></script>
+    <script src="/vendor/js/adminlte.min.js"></script>
+    <script src="/vendor/js/jquery.imageMaps.min.js"></script>
 
-    <script src="{{ config('website.ali.oss.host').'js/admin/'.config('website.web.js.admin').'/app.js' }}"></script>
+    <script src="/js/app.js"></script>
 @endif
 {{--当前所选菜单自动展开--}}
 <script>
