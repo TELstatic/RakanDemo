@@ -32,7 +32,7 @@ class AdminAuth
 
             if (Auth::guard($guard)->id() != 1) {
                 if (!in_array($request->path(), $blackList)) {
-                    if (!Auth::guard($guard)->user()->hasRole('管理员')) {
+                    if (!Auth::guard($guard)->user()->hasRole('超级管理员')) {
                         if (!Auth::guard($guard)->user()->can($path)) {
                             if ($request->ajax()) {
                                 return response('Unauthorized.', 403);
