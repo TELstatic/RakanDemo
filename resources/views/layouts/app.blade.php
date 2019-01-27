@@ -11,8 +11,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
+    <script src="/vendor/js/axios.min.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
-
 
 
     <!-- Styles -->
