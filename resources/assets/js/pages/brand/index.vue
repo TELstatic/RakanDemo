@@ -5,8 +5,10 @@
             <Row>
                 <Row>
                     <Col span="12">
-                        <Button type="success" @click="handleCreate">新增</Button>
-                        <Button type="error" @click="handleDelete" :disabled="deleteStatus">删除</Button>
+                        <Button type="success" @click="handleCreate" v-can="$admin.postBrand">新增</Button>
+                        <Button type="error" @click="handleDelete" :disabled="deleteStatus" v-can="$admin.delBrands">
+                            删除
+                        </Button>
                     </Col>
                 </Row>
                 <Table ref="table"
@@ -160,7 +162,8 @@
                                         size: 'small',
                                     },
                                     style: {
-                                        marginRight: '2px'
+                                        marginRight: '2px',
+                                        display: this.$admin.putBrand(true) ? '' : 'none'
                                     },
                                     on: {
                                         click: () => {

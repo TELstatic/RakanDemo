@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Events\RebuildMenu;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Cache;
@@ -49,9 +50,10 @@ class RoleController extends Controller
             $permissions = $request->get('permissions');
             $role->syncPermissions($permissions);
 
-            $key = config('app.name').'menus';
+            $key = config('app.name').'_menus';
             Cache::forget($key);
 
+            event(new RebuildMenu($role->id));
             return true;
         });
 
@@ -72,9 +74,10 @@ class RoleController extends Controller
             $permissions = $request->get('permissions');
             $role->syncPermissions($permissions);
 
-            $key = config('app.name').'menus';
+            $key = config('app.name').'_menus';
             Cache::forget($key);
 
+            event(new RebuildMenu($role->id));
             return true;
         });
 

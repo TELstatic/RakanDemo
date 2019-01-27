@@ -30,8 +30,9 @@
                 </Col>
             </Row>
 
-            <Button type="success" @click="handleUp" :disabled="upStatus">上架</Button>
-            <Button type="warning" @click="handleDown" :disabled="downStatus">下架</Button>
+            <Button type="success" @click="handleUp" :disabled="upStatus" v-can="$admin.putProductActive">上架</Button>
+            <Button type="warning" @click="handleDown" :disabled="downStatus" v-can="$admin.putProductActive">下架
+            </Button>
 
             <Table border ref="table" :loading="loading" :columns="columns" :data="data"
                    @on-selection-change="selectionChange"></Table>

@@ -1,7 +1,7 @@
 import req from './request';
-import permisson from './permission';
+import permission from './permission';
 
-let baseUrl = '/admin';
+let baseUrl = 'admin';
 
 export default {
     //获取用户列表
@@ -178,31 +178,5 @@ export default {
 
         return req.del(url, form);
     },
-    //获取订单
-    getOrders(form) {
-        let url = baseUrl + '/order/index';
-
-        return req.get(url, form);
-    },
-    //标记发货
-    putOrderShippingStatus(form) {
-        let url = baseUrl + '/order/send';
-
-        if (typeof (arguments[0]) === "boolean") {
-            return permission.has(url);
-        }
-
-        return req.put(url, form);
-    },
-    //完成订单
-    putOrderOrderStatus(form) {
-        let url = baseUrl + '/order/done';
-
-        if (typeof (arguments[0]) === "boolean") {
-            return permission.has(url);
-        }
-
-        return req.put(url, form);
-    }
 
 }

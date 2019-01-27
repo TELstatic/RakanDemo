@@ -4,12 +4,12 @@ if (!sessionStorage.getItem('permissions')) {
     axios.get('/admin/user/permission').then(res => {
         sessionStorage.setItem('permissions', res.data);
     });
-}
-
-try {
-    permissions = permissions.concat(sessionStorage.getItem('permissions').split(','));
-}catch (e) {
-
+} else {
+    try {
+        permissions = permissions.concat(sessionStorage.getItem('permissions').split(','));
+    } catch (e) {
+        permissions = [];
+    }
 }
 
 export default {

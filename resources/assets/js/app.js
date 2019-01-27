@@ -20,7 +20,12 @@ Vue.directive('can', {
     bind: function (el, binding) {
         let action = binding.expression.split('.');
         if (!Vue.prototype[action[0]][action[1]](true)) {
-            el.parentNode.removeChild(el);
+            //默认删除元素 失败则隐藏
+            try {
+                el.parentNode.removeChild(el);
+            } catch (e) {
+                el.style.display = 'none';
+            }
         }
     }
 });
