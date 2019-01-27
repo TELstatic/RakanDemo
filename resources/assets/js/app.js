@@ -1,19 +1,41 @@
 require('./bootstrap');
 
-window.Vue = require('vue');
-
+import Vue from 'vue';
 import iView from 'iview';
-
-Vue.use(iView);
-import 'iview/dist/styles/iview.css';
-
+import VueQuillEditor from 'vue-quill-editor';
 import xayah from 'xayah';
 
+import 'quill/dist/quill.snow.css';
+import 'iview/dist/styles/iview.css';
+
+import ADMIN from './utils/admin';
+
+Vue.use(iView);
+Vue.use(VueQuillEditor);
 Vue.use(xayah);
 
-Vue.component('AdminUpload', require('./components/AdminUpload'));
-Vue.component('WebUpload', require('./components/WebUpload'));
+Vue.prototype.$admin = ADMIN;
+
+Vue.directive('can', {
+    bind: function (el, binding) {
+        let action = binding.expression.split('.');
+        if (!Vue.prototype[action[0]][action[1]](true)) {
+            el.parentNode.removeChild(el);
+        }
+    }
+});
+
+const files = require.context('./pages', true, /\.vue$/i);
+
+// 示例 user/index => user-index
+files.keys().map(key => {
+    const pageName = _.camelCase(key.replace(/^\.\/(.*)\.\w+$/, '$1'));
+
+    if (pageName !== 'breadCrumb') {
+        Vue.component(pageName, files(key));
+    }
+});
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
 });

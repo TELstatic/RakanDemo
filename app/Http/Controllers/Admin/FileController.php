@@ -16,7 +16,6 @@ use OSS\OssClient;
  */
 class FileController extends Controller
 {
-
     /**
      * 获取文件
      * @desc 获取文件列表
@@ -62,6 +61,10 @@ class FileController extends Controller
         return Auth::user()->getPolicy();
     }
 
+    /**
+     * 文件测试
+     * @desc 文件测试
+    */
     public function test()
     {
 
