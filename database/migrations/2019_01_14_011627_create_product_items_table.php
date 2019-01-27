@@ -23,7 +23,7 @@ class CreateProductItemsTable extends Migration
             $table->string('standard')->comment('规格');
             $table->decimal('price', 10, 2)->comment('价格');
             $table->unsignedInteger('reserve')->comment('库存');
-            $table->json('images')->comment('缩略图');
+            $table->string('images')->comment('缩略图');
             $table->timestamps();
         });
     }

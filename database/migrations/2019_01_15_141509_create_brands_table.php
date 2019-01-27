@@ -17,7 +17,7 @@ class CreateBrandsTable extends Migration
             $table->increments('id');
             $table->string('title')->comment('标题');
             $table->integer('sort', false, true)->default(0)->comment('排序');
-            $table->json('images')->comment('Logo');
+            $table->string('images')->comment('Logo');
             $table->timestamps();
         });
     }
