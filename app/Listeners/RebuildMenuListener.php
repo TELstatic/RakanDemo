@@ -62,7 +62,7 @@ class RebuildMenuListener
             DB::table('role_has_menus')->where('role_id', $event->role->id)->delete();
             DB::table('role_has_menus')->insert($data);
 
-            $key = 'product_menus';
+            $key = config('app.name').'_menus';
 
             Cache::forget($key);
         }
